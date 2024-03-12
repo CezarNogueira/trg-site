@@ -1,5 +1,4 @@
 import './Header.css'
-import Title from '../title/title'
 
 function Header () {
     return (
