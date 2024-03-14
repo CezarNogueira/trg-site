@@ -1,42 +1,88 @@
-section {
+body {
+    background-color: #f6f6f6;
+}
+
+.banner-area {
     width: 100%;
-    height: 480px;
+    height: 560px;
+    margin-top: 1rem;
     background-color: aquamarine;
+
+    grid-area: "banner-area";
+    grid-column: banner-area;
 }
 
-.content {
+.content-area {
+    width: 1800px;
+    height: 1200px;
+    margin-bottom: 1rem;
+
+    grid-area: "content-area";
+    grid-column: content-area;
+}
+
+article {
+    background-color: blue;
+}
+
+.img-text {
     width: 100%;
-
-    background-color: red;
-}
-
-.grid-wrapper>* {
-    min-height: 100px;
-    border-radius: 4px;
+    height: 100%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+    grid-area: "img-text";
+    grid-row: img-text;
 }
 
+.content-img, .content-text {
+    width: 50%;
+    height: 100%;
+}
+
+.certificates {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+
+    display: flex;
+
+    grid-area: "certificates";
+    grid-row: certificates;
+}
+
+.certificate1, .certificate2, .certificate3 {
+    width: 600px;
+}
+
+/* CSS GRID LAYOUT ALL */
+
 .grid-wrapper {
+    max-width: 1800px;
+
+    margin: 0 auto;
+
+    border: 0px solid #ffffff;
+
     display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 240px repeat(3, 1fr);
+
+    grid-template-areas: 
+    "banner-area banner-area banner-area"
+    "content-area content-area content-area";
+
     gap: 1rem;
 }
 
-header {
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-}
+/* CSS GRID LAYOUT CONTENT-AREA */
 
-section {
-    grid-column: 1 / 5;
-    grid-row: 2 / 2;
-}
+.content-area {
 
-.content {
-    grid-column: 1 / 5;
-    grid-row: 3 / 3;
+    display: grid;
+
+    grid-template-areas: 
+    "img-text"
+    "img-text"
+    "certificates";
+
+    gap: 1rem;
 }
