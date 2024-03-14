@@ -24,6 +24,11 @@
     text-transform: uppercase;
     font-weight: 500;
     color: #803E3E;
+    cursor: pointer;
+}
+
+li a:hover {
+    color: #BF8E8E;
 }
 
 .conteiner-logo {
