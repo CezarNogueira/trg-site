@@ -1,12 +1,10 @@
 body {
-    background-color: #f6f6f6;
+    background-color: #202020;
 }
 
 .banner-area {
     width: 100%;
-    height: 800px;
-    margin-top: 1rem;
-    background-color: aquamarine;
+    height: 900px;
     
     display: flex;
     align-items: center;
@@ -17,7 +15,6 @@ body {
 }
 
 .img-base-banner {
-    background-color: crimson;
     width: 1760px;
     height: 760px;
 
@@ -29,7 +26,15 @@ body {
 .imagem-banner {
     width: 1280px;
     height: auto;
-    border-radius: 24px;
+    box-shadow: 1px 5px 20px;
+    border-radius: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.imagem-banner:hover {
+    width: 1400px;
+    height: auto;
 }
 
 .content-area {
@@ -41,22 +46,19 @@ body {
     grid-column: content-area;
 }
 
-article {
-    background-color: blue;
-}
-
 .img-text {
     width: 100%;
     height: 800px;
-
-    display: flex;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
     grid-area: "img-text";
     grid-row: img-text;
 }
 
 .content-img, .content-text {
-    width: 50%;
+    width: 800px;
     height: 100%;
 
     display: flex;
@@ -64,20 +66,44 @@ article {
     justify-content: center;
 }
 
-.img-base-content {
-    background-color: yellowgreen;
-    width: 800px;
-    height: 680px;
-
+.text-content {
+    background-color: #f5f5f5;
+    width: 600px;
+    height: 360px;
+    box-shadow: 1px 5px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.text-content:hover {
+    width: 680px;
+    height: 440px;
+}
+
+#text-home {
+    width: 500px;
+    margin: 40px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .imagem-content {
-    width: 720px;
+    width: 540px;
     height: auto;
-    border-radius: 24px;
+    box-shadow: 1px 5px 20px;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.imagem-content:hover {
+    width: 580px;
+    height: auto;
 }
 
 .certificates {
@@ -85,14 +111,19 @@ article {
     height: 400px;
     background-color: aquamarine;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
 
     grid-area: "certificates";
     grid-row: certificates;
 }
 
-.certificate1, .certificate2, .certificate3 {
-    width: 600px;
+.certificate-box {
+    background-color: aqua;
+    width: 400px;
+    height: 240px;
 }
 
 /* CSS GRID LAYOUT ALL */

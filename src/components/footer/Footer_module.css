@@ -1,26 +1,115 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+:root {
+    --color-hover: #38B6FF;
+    --color-netural-0: #0e0c0c;
+    --color-netural-10: #171717;
+    --color-netural-30: #a8a29e;
+    --color-netural-40: #f5f5f5;
 }
 
-.footer {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+footer {
     width: 100%;
-    padding: 80px 0;
-    background-color: #fff200;
+    color: var(--color-netural-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-content {
+    background-color: var(--color-netural-10);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#desc {
+    color: var(--color-hover);
+    font-weight: 500;
+}
+
+.footer-contacts {
+    margin-bottom: 0.75rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social .footer-link {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-netural-40);
+    border-radius: 50%;
+    transition: all 0.5s;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        font-size: 12px;
+.footer-social .footer-link i {
+    font-size: 1.25rem;
+}
+
+.footer-social .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whattsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-netural-30);
+    transition: all 0.5s;
+}
+
+.footer-list .footer-link:hover {
+    color: var(--color-hover);
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-netural-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
     }
 }
 
-@media (max-width: 480px) {
-    .footer {
-        font-size: 8px; 
+@media screen and (max-width: 426px) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
     }
 }
