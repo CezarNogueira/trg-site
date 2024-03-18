@@ -1,6 +1,13 @@
+import { useState } from 'react'
 import './Header_module.css'
 
 function Header () {
+    
+    const [nowPage, setNowPage] = useState('home');
+
+    const clickPage = (page) => {
+        setNowPage(page);
+    }
     return (
         <header className='header'>
                 <div className='conteiner-logo'>
@@ -9,13 +16,13 @@ function Header () {
                     </div>
                 </div>
             <nav className='menu'>
-                <li><a href="">Home</a></li>
-                <li><a href="servicos">Serviços</a></li>
-                <li><a href="contato">Contato</a></li>
-                <li><a href="sobre">Sobre mim</a></li>
+                <li onClick={() => clickPage('home')}><a>Home</a></li>
+                <li onClick={() => clickPage('servicos')}><a>Serviços</a></li>
+                <li onClick={() => clickPage('contato')}><a>Contato</a></li>
+                <li onClick={() => clickPage('sobre')}><a>Sobre mim</a></li>
             </nav>
         </header>
-    )
+    );
 }
 
 export default Header

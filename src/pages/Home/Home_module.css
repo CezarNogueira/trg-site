@@ -4,7 +4,7 @@ body {
 
 .banner-area {
     width: 100%;
-    height: 900px;
+    height: 880px;
     
     display: flex;
     align-items: center;
@@ -14,17 +14,8 @@ body {
     grid-column: banner-area;
 }
 
-.img-base-banner {
-    width: 1760px;
-    height: 760px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .imagem-banner {
-    width: 1280px;
+    width: 70%;
     height: auto;
     box-shadow: 1px 5px 20px;
     border-radius: 28px;
@@ -33,14 +24,17 @@ body {
 }
 
 .imagem-banner:hover {
-    width: 1400px;
+    width: 75%;
     height: auto;
 }
 
 .content-area {
-    width: 1800px;
+    width: 100%;
     height: 1200px;
     margin-bottom: 1rem;
+
+    justify-items: center;
+    align-items: center;
 
     grid-area: "content-area";
     grid-column: content-area;
@@ -52,13 +46,15 @@ body {
     
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
 
     grid-area: "img-text";
     grid-row: img-text;
 }
 
 .content-img, .content-text {
-    width: 800px;
+    width: 100%;
     height: 100%;
 
     display: flex;
@@ -68,8 +64,8 @@ body {
 
 .text-content {
     background-color: #f5f5f5;
-    width: 600px;
-    height: 360px;
+    width: 60%;
+    height: 50%;
     box-shadow: 1px 5px 20px;
     display: flex;
     flex-direction: column;
@@ -81,19 +77,23 @@ body {
 }
 
 .text-content:hover {
-    width: 680px;
-    height: 440px;
+    width: 65%;
+    height: 55%;
 }
 
 #text-home {
-    width: 500px;
-    margin: 40px;
+    width: 90%;
+    height: 90%;
+    margin: 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
     text-align: center;
     cursor: pointer;
 }
 
 .imagem-content {
-    width: 540px;
+    width: 60%;
     height: auto;
     box-shadow: 1px 5px 20px;
     border-radius: 28px;
@@ -102,19 +102,19 @@ body {
 }
 
 .imagem-content:hover {
-    width: 580px;
+    width: 65%;
     height: auto;
 }
 
 .certificates {
     width: 100%;
     height: 400px;
-    background-color: aquamarine;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+    gap: 1rem;
 
     grid-area: "certificates";
     grid-row: certificates;
@@ -122,14 +122,14 @@ body {
 
 .certificate-box {
     background-color: aqua;
-    width: 400px;
-    height: 240px;
+    width: 80%;
+    height: 65%;
 }
 
 /* CSS GRID LAYOUT ALL */
 
 .grid-wrapper {
-    max-width: 1800px;
+    width: 100%;
 
     margin: 0 auto;
 
@@ -138,10 +138,9 @@ body {
     display: grid;
 
     grid-template-areas: 
-    "banner-area banner-area banner-area"
-    "content-area content-area content-area";
-
-    gap: 1rem;
+    "banner-area"
+    "content-area"
+    "certificates";
 }
 
 /* CSS GRID LAYOUT CONTENT-AREA */
@@ -150,56 +149,241 @@ body {
 
     display: grid;
 
-    grid-template-areas: 
-    "img-text"
-    "img-text"
-    "certificates";
+    grid-template-columns: repeat(1, 1fr);
 
     gap: 1rem;
 }
 
-@media (max-width: 768px) {
-    .conteiner {
-        flex-direction: column;
-        font-size: 12px;
+@media screen and (max-width: 768px) {
+
+    .banner-area {
+            height: 800px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            grid-area: "banner-area";
+            grid-column: banner-area;
     }
 
-    .grid-wrapper {
-        max-width: 768px;
+    .imagem-banner {
+        width: 480px;
+        height: auto;
+        box-shadow: 1px 5px 20px;
+        border-radius: 28px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .imagem-banner:hover {
+        width: 520px;
+        height: auto;
+    }
+
+    .content-area {
+        height: 1200px;
+        margin-bottom: 1rem;
     
-        margin: 0 auto;
+        grid-area: "content-area";
+        grid-column: content-area;
+    }
+
+    .img-text {
+        height: 1200px;
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     
-        border: 0px solid #ffffff;
+        grid-area: "img-text";
+        grid-row: img-text;
+    }
+
+    .content-img, .content-text {
+        height: 100%;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .text-content {
+        background-color: #f5f5f5;
+        width: 520px;
+        height: 280px;
+        box-shadow: 1px 5px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 28px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    
+    .text-content:hover {
+        width: 540px;
+        height: 320px;
+    }
+    
+    #text-home {
+        font-size: 1rem;
+        width: 420px;
+        height: 280px;
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .imagem-content {
+        width: 480px;
+        height: auto;
+        box-shadow: 1px 5px 20px;
+        border-radius: 28px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    
+    .imagem-content:hover {
+        width: 520px;
+        height: auto;
+    }
+
+    .certificates {
+        max-width: 100%;
+        height: 1200px;
     
         display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
     
-        grid-template-areas: 
-        "banner-area banner-area banner-area"
-        "content-area content-area content-area";
+        grid-area: "certificates";
+        grid-row: certificates;
+    }
     
-        gap: 1rem;
+    .certificate-box {
+        background-color: aqua;
+        width: 400px;
+        height: 240px;
     }
 }
 
-@media (max-width: 480px) {
-    .conteiner {
-        flex-direction: column;
-        font-size: 8px;
+@media screen and (max-width: 426px) {
+
+    .banner-area {
+        height: 800px;
+        background-color: aqua;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        grid-area: "banner-area";
+        grid-column: banner-area;
     }
 
-    .grid-wrapper {
-        max-width: 480px;
+    .imagem-banner {
+        width: 360px;
+        height: auto;
+        box-shadow: 1px 5px 20px;
+        border-radius: 28px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .imagem-banner:hover {
+        width: 400px;
+        height: auto;
+    }
+
+    .content-area {
+        height: 1200px;
+        margin-bottom: 1rem;
     
-        margin: 0 auto;
+        grid-area: "content-area";
+        grid-column: content-area;
+    }
+
+    .img-text {
+        height: 1200px;
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     
-        border: 0px solid #ffffff;
+        grid-area: "img-text";
+        grid-row: img-text;
+    }
+
+    .content-img, .content-text {
+        height: 100%;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .text-content {
+        background-color: #f5f5f5;
+        width: 360px;
+        height: 300px;
+        box-shadow: 1px 5px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 28px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    
+    .text-content:hover {
+        width: 380px;
+        height: 320px;
+    }
+    
+    #text-home {
+        font-size: 0.8rem;
+        width: 340px;
+        height: 280px;
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .imagem-content {
+        width: 360px;
+        height: auto;
+        box-shadow: 1px 5px 20px;
+        border-radius: 28px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    
+    .imagem-content:hover {
+        width: 400px;
+        height: auto;
+    }
+
+    .certificates {
+        height: 1200px;
     
         display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
     
-        grid-template-areas: 
-        "banner-area banner-area banner-area"
-        "content-area content-area content-area";
+        grid-area: "certificates";
+        grid-row: certificates;
+    }
     
-        gap: 1rem;
+    .certificate-box {
+        background-color: aqua;
+        width: 360px;
+        height: 200px;
     }
 }
