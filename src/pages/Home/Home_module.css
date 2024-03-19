@@ -3,7 +3,7 @@ body {
 }
 
 .banner-area {
-    width: 100%;
+    width: 90vw;
     height: 880px;
     
     display: flex;
@@ -15,7 +15,7 @@ body {
 }
 
 .imagem-banner {
-    width: 70%;
+    width: 70vw;
     height: auto;
     box-shadow: 1px 5px 20px;
     border-radius: 28px;
@@ -24,7 +24,7 @@ body {
 }
 
 .imagem-banner:hover {
-    width: 75%;
+    width: 75vw;
     height: auto;
 }
 
@@ -128,7 +128,7 @@ body {
 
 /* CSS GRID LAYOUT ALL */
 
-.grid-wrapper {
+.grid_wrapper_home {
     width: 100%;
 
     margin: 0 auto;
@@ -136,6 +136,9 @@ body {
     border: 0px solid #ffffff;
 
     display: grid;
+
+    justify-items: center;
+    align-items: center;
 
     grid-template-areas: 
     "banner-area"
@@ -382,7 +385,7 @@ body {
     }
     
     .certificate-box {
-        background-color: aqua;
+        background-color: white;
         width: 360px;
         height: 200px;
     }

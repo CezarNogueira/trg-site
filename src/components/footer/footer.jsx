@@ -46,9 +46,6 @@ function Footer () {
                         <a href="#" className='footer-link'>Serviços</a>
                     </li>
                     <li>
-                        <a href="#" className='footer-link'>Contato</a>
-                    </li>
-                    <li>
                         <a href="#" className='footer-link'>Sobre mim</a>
                     </li>
                 </ul>

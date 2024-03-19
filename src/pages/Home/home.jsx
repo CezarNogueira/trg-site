@@ -1,14 +1,10 @@
 import './Home_module.css'
-import Header from '../../components/header/header'
-import Footer from '../../components/footer/footer'
 
 function Home () {
     return (
         <div className='conteiner'>
 
-            <header><Header/></header>
-
-            <div className="grid-wrapper">
+            <div className="grid_wrapper_home">
 
                 <section className='banner-area'>              
                         <img className='imagem-banner' src="../../public/trg-banner.jpg" alt="Imagem do Banner sobre a TRG" />
@@ -48,8 +44,6 @@ function Home () {
                 </div>
 
             </div>
-
-            <footer><Footer/></footer>
 
         </div> 
     );
