@@ -2,16 +2,14 @@
     width: 100%;
 
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
     align-items: center;
     justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .servicos_conteiner {
-    width: 70vw;
-    height: 90vh;
+    width: 75vw;
+    height: 80vh;
     
     display: flex;
     align-items: center;
@@ -19,45 +17,46 @@
 }
 
 .imagem-servicos {
-    width: 60vw;
+    width: 65vw;
     height: auto;
+
     box-shadow: 1px 5px 20px;
     border-radius: 28px;
+
     transition: all 0.5s;
     cursor: pointer;
 }
 
 .imagem-servicos:hover {
-    width: 65vw;
+    width: 70vw;
     height: auto;
 }
 
-article {
-    width: 10vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .back_arrow {
-    border-radius: 50%;
     width: 50px;
     height: 50px;
+
+    border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
+
     background-color: #f6f6f6;
 }
 
 .next_arrow {
-    border-radius: 50%;
     width: 50px;
     height: 50px;
+
+    border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
     background-color: #f6f6f6;
 }
