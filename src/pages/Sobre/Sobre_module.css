@@ -7,7 +7,7 @@
     grid-template-columns: repeat(1, 1fr);
 }
 
-.sobre-content {
+.content_sobre {
     width: 80vw;
     height: 80vh;
 
@@ -17,26 +17,18 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.imagem-conteiner {
+.conteiner_imagem_sobre {
     width: 40vw;
     height: 40vh;
+
+    background-color: #f5f5f5;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.imagem_sobre {
-    width: 20vw;
-    height: auto;
-
-    box-shadow: 1px 5px 20px;
-    border-radius: 28px;
-
-    cursor: pointer;
-}
-
-.text {
+.conteiner_text_sobre {
     background-color: #f5f5f5;
 
     width: 35vw;
