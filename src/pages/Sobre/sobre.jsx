@@ -8,7 +8,7 @@ function Sobre () {
             <div className="grid_wrapper_sobre">
 
                 <div className='imagem'>
-                    <img className='imagem_sobre' src="../../public/profile-home.jpg" alt="" />
+                    <img className='imagem_sobre' src="" alt="" />
                 </div>
 
                 <div className='text'>
